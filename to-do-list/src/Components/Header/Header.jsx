@@ -1,10 +1,15 @@
 import { useState } from "react";
+import { Link, Route, Routes } from "react-router";
+import Home from "../Home/Home";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
+      <Routes>
+        <Route path="/" element={Home} />
+      </Routes>
       <header className="bg-[#ffb703] px-6 py-4 shadow-md">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           {/* Logo */}
@@ -16,12 +21,14 @@ function Header() {
           <nav className="hidden md:block">
             <ul className="flex items-center gap-6 text-[#023047] font-medium">
               <li>
-                <a
-                  href=""
-                  className="hover:underline underline-offset-4 transition-all duration-200"
-                >
-                  Home
-                </a>
+                <Link to="/">
+                  <a
+                    href=""
+                    className="hover:underline underline-offset-4 transition-all duration-200"
+                  >
+                    Home
+                  </a>
+                </Link>
               </li>
               <li>
                 <a
