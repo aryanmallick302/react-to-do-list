@@ -7,10 +7,9 @@ import Home from "./Components/Home/Home";
 function App() {
   return (
     <>
-      <Routes></Routes>
       <div className="min-h-screen bg-[#219ebc]">
         <Header />
-        <Home />
+        {/* <Home /> */}
       </div>
     </>
   );

@@ -1,15 +1,13 @@
 import { useState } from "react";
-import { Link, Route, Routes } from "react-router";
+import { Link, NavLink, Route, Routes } from "react-router";
 import Home from "../Home/Home";
+import About from "../About/About";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <Routes>
-        <Route path="/" element={Home} />
-      </Routes>
       <header className="bg-[#ffb703] px-6 py-4 shadow-md">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           {/* Logo */}
@@ -21,22 +19,20 @@ function Header() {
           <nav className="hidden md:block">
             <ul className="flex items-center gap-6 text-[#023047] font-medium">
               <li>
-                <Link to="/">
-                  <a
-                    href=""
-                    className="hover:underline underline-offset-4 transition-all duration-200"
-                  >
-                    Home
-                  </a>
-                </Link>
+                <NavLink
+                  to="/"
+                  className="hover:underline underline-offset-4 transition-all duration-200"
+                >
+                  Home
+                </NavLink>
               </li>
               <li>
-                <a
-                  href=""
+                <NavLink
+                  to="/about"
                   className="hover:underline underline-offset-4 transition-all duration-200"
                 >
                   About
-                </a>
+                </NavLink>
               </li>
               <li>
                 <button className="bg-[#023047] text-[#ffb703] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#023047]/85 transition-colors duration-200">
@@ -78,22 +74,20 @@ function Header() {
         >
           <ul className="flex flex-col gap-3 text-[#023047] font-medium pb-4 border-t border-[#023047]/20 pt-4">
             <li>
-              <a
-                href=""
-                className="block hover:bg-[#023047]/10 px-3 py-2
-                rounded-lg transition-colors duration-200"
+              <NavLink
+                to="/"
+                className="hover:underline underline-offset-4 transition-all duration-200"
               >
                 Home
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href=""
-                className="block hover:bg-[#023047]/10 px-3 py-2
-                rounded-lg transition-colors duration-200"
+              <NavLink
+                to="/about"
+                className="hover:underline underline-offset-4 transition-all duration-200"
               >
                 About
-              </a>
+              </NavLink>
             </li>
             <li>
               <button className="w-full bg-[#023047] text-[#ffb703] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#023047]/85 transition-colors duration-200">
@@ -103,6 +97,10 @@ function Header() {
           </ul>
         </div>
       </header>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </>
   );
 }
