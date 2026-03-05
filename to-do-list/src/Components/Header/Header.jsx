@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { Link, NavLink, Route, Routes } from "react-router";
 import Home from "../Home/Home";
-import About from "../About/About";
+import About from "../ContactUs/ContactUs";
+import ContactUs from "../ContactUs/ContactUs";
+import Register from "../Register/Register";
+import Login from "../Login/Login";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,16 +31,24 @@ function Header() {
               </li>
               <li>
                 <NavLink
-                  to="/about"
+                  to="/contact-us"
                   className="hover:underline underline-offset-4 transition-all duration-200"
                 >
-                  About
+                  Contact Us
                 </NavLink>
               </li>
               <li>
-                <button className="bg-[#023047] text-[#ffb703] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#023047]/85 transition-colors duration-200">
+                <button className="bg-[#023047] text-[#ffb703] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#023047]/85 transition-colors duration-200 cursor-pointer">
                   Login
                 </button>
+              </li>
+              <li>
+                <NavLink
+                  to="/register"
+                  className="bg-[#023047] text-[#ffb703] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#023047]/85 transition-colors duration-200 cursor-pointer"
+                >
+                  Register
+                </NavLink>
               </li>
             </ul>
           </nav>
@@ -83,10 +94,10 @@ function Header() {
             </li>
             <li>
               <NavLink
-                to="/about"
+                to="/contact-us"
                 className="hover:underline underline-offset-4 transition-all duration-200"
               >
-                About
+                Contact Us
               </NavLink>
             </li>
             <li>
@@ -99,7 +110,9 @@ function Header() {
       </header>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </>
   );
