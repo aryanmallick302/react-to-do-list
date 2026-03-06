@@ -1,7 +1,9 @@
-import { Routes } from "react-router";
+import { Routes, Route } from "react-router";
 import Header from "./Components/Header/Header";
-import ItemContainer from "./Components/ItemContainer/ItemContainer";
 import "./index.css";
+import Register from "./Components/Register/Register";
+import Login from "./Components/Login/Login";
+import ContactUs from "./Components/ContactUs/ContactUs";
 import Home from "./Components/Home/Home";
 
 function App() {
@@ -9,6 +11,12 @@ function App() {
     <>
       <div className="min-h-screen bg-[#219ebc]">
         <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
         {/* <Home /> */}
       </div>
     </>

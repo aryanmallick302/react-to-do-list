@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink, Route, Routes } from "react-router";
 import Home from "../Home/Home";
-import About from "../ContactUs/ContactUs";
 import ContactUs from "../ContactUs/ContactUs";
 import Register from "../Register/Register";
 import Login from "../Login/Login";
@@ -38,9 +37,12 @@ function Header() {
                 </NavLink>
               </li>
               <li>
-                <button className="bg-[#023047] text-[#ffb703] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#023047]/85 transition-colors duration-200 cursor-pointer">
+                <NavLink
+                  to="/login"
+                  className="bg-[#023047] text-[#ffb703] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#023047]/85 transition-colors duration-200 cursor-pointer"
+                >
                   Login
-                </button>
+                </NavLink>
               </li>
               <li>
                 <NavLink
@@ -101,19 +103,16 @@ function Header() {
               </NavLink>
             </li>
             <li>
-              <button className="w-full bg-[#023047] text-[#ffb703] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#023047]/85 transition-colors duration-200">
+              <NavLink
+                to="/login"
+                className="w-full bg-[#023047] text-[#ffb703] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#023047]/85 transition-colors duration-200"
+              >
                 Login
-              </button>
+              </NavLink>
             </li>
           </ul>
         </div>
       </header>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
     </>
   );
 }
