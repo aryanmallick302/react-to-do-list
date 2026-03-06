@@ -7,10 +7,7 @@ function ContactUs() {
     <>
       <div className="flex items-center justify-center py-16 px-8">
         {/* Inner panel — the cassette label from the sketch */}
-        <div
-          className="rounded-2xl border-2 border-[#023047] px-8 py-6 flex flex-col items-center gap-5 shadow-lg"
-          style={{ background: "rgba(255, 183, 3, 0.08)", minWidth: "320px" }}
-        >
+        <div className="rounded-2xl border-2 border-[#023047] bg-[#ffb703]/10 px-8 py-6 min-w-80 flex flex-col items-center gap-5 shadow-lg">
           {/* Name + Email block */}
           <div
             className="w-full rounded-xl border-2 border-[#023047] px-6 py-3 text-center"
@@ -45,7 +42,7 @@ function ContactUs() {
           >
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com"
+              href="www.linkedin.com/in/aryan-mallick"
               target="_blank"
               rel="noopener noreferrer"
               id="linkedIn"
@@ -61,7 +58,7 @@ function ContactUs() {
 
             {/* Instagram */}
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/aryan_mallick209/"
               target="_blank"
               rel="noopener noreferrer"
               id="instagram"

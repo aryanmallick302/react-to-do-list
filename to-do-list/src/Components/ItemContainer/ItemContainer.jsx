@@ -23,7 +23,7 @@ function ItemContainer() {
   }
   return (
     <>
-      <div id="item-container" className="bg-[#8ecae6] px-24 py-8">
+      <div id="item-container" className="bg-gray-50 px-24 py-8">
         <div className="mb-6">
           <h1 className="text-3xl font-bold text-[#023047] tracking-tight mb-4">
             Task for Today
