@@ -6,16 +6,10 @@ function ItemContainer() {
   const [item, setItem] = useState([]);
   const [task, setTask] = useState("");
 
-  // useEffect(() => {
-  //   localStorage.getItem(item);
-  // }, []);
-
   function itemAdd() {
     if (task == "") return;
     setItem([...item, task]);
     setTask("");
-    const impTask = JSON.stringify(item);
-    // localStorage.setItem("Task", impTask);
   }
 
   function deleteItem(evt) {
