@@ -1,19 +1,15 @@
 import { useState } from "react";
-import { Link, NavLink, Route, Routes } from "react-router";
-import Home from "../Home/Home";
-import ContactUs from "../ContactUs/ContactUs";
-import Register from "../Register/Register";
-import Login from "../Login/Login";
+import { NavLink } from "react-router";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <header className="bg-[#ffb703] px-6 py-4 shadow-md">
+      <header className="bg-white px-6 py-4 shadow-md border-b border-gray-200 sticky">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           {/* Logo */}
-          <h1 className="text-2xl font-bold text-[#023047] tracking-tight">
+          <h1 className="text-4xl font-light text-black tracking-tight">
             To Do List
           </h1>
 
@@ -39,7 +35,7 @@ function Header() {
               <li>
                 <NavLink
                   to="/login"
-                  className="bg-[#023047] text-[#ffb703] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#023047]/85 transition-colors duration-200 cursor-pointer"
+                  className="bg-black text-gray-100 px-4 py-2 rounded-lg font-semibold text-sm hover:bg-transparent hover:text-black transition-colors duration-200 cursor-pointer"
                 >
                   Login
                 </NavLink>
@@ -47,7 +43,7 @@ function Header() {
               <li>
                 <NavLink
                   to="/register"
-                  className="bg-[#023047] text-[#ffb703] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#023047]/85 transition-colors duration-200 cursor-pointer"
+                  className="bg-black text-gray-100 px-4 py-2 rounded-lg font-semibold text-sm hover:bg-transparent hover:text-black transition-colors duration-200 cursor-pointer"
                 >
                   Register
                 </NavLink>
@@ -105,7 +101,7 @@ function Header() {
             <li>
               <NavLink
                 to="/login"
-                className="w-full bg-[#023047] text-[#ffb703] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#023047]/85 transition-colors duration-200"
+                className="w-full bg-black text-gray-200 px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#023047]/85 transition-colors duration-200"
               >
                 Login
               </NavLink>
